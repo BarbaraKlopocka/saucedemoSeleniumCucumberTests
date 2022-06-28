@@ -23,10 +23,3 @@ Feature: Login
 #    And Go to the menu and click logout button
 #    Then The user is on home page
 
-  @ignore
-  Scenario: Menu contains 4 references
-    Given Go to the home page
-    And User login with username "standard_user" and password as "secret_sauce"
-    And The user should login successfully and is on the inventory page
-    When Go to the menu
-    Then Menu should contain 4 references
