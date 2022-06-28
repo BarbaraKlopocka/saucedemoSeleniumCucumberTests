@@ -1,0 +1,22 @@
+name: test flow
+on: push
+
+env:
+  CUCUMBER_PUBLISH_TOKEN: c5c6ff13-1779-4ae0-9f4c-09a97f6b22d4
+jobs:
+  build:
+    name: Run test framework
+    runs-on: ubuntu-latest
+    steps:
+      - users: actions/checkout@v2
+      - name: Run tests
+        run: |
+          java --version
+          mvn clean test
+      - name: Publish Test Report
+        if: ${{ always() }}
+        uses: scacap/action-surefire-report@v1
+      - uses: deblockt/cucumber-report-annotations-action@v1.7
+        with:
+          access-token: ${{ secrets.GITHUB_TOKEN }}
+          path: "**/cucumber-report.json"
