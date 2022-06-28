@@ -8,7 +8,7 @@ jobs:
     name: Run test framework
     runs-on: ubuntu-latest
     steps:
-      - users: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: Run tests
         run: |
           java --version
