@@ -2,7 +2,7 @@ name: test flow
 on: push
 
 env:
-  CUCUMBER_PUBLISH_TOKEN: c5c6ff13-1779-4ae0-9f4c-09a97f6b22d4
+  CUCUMBER_PUBLISH_TOKEN: 7785c71f-d36d-4075-836e-a6cc988e5256
 jobs:
   build:
     name: Run test framework
